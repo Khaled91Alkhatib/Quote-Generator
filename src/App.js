@@ -23,10 +23,7 @@ function App() {
   }, []); // eslint-disable-line
 
   return (
-    <div>
-      <video className="the-video" autoPlay loop muted>
-        <source src="Background.mp4" type="video/mp4" />
-      </video>
+    <div className="main-load">
       <div className="content">
         <div className="title">Daily Dose of Advice</div>
         <div className="advice-and-button">
