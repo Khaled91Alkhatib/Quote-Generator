@@ -11,7 +11,7 @@ function App() {
       .then((response) => {
         // console.log("response", response.data.slip.advice);
         setAdvice(response.data.slip.advice);
-        console.log("test", advice);
+        // console.log("test", advice);
       })
       .catch((error) => {
         console.log("error", error);
@@ -28,7 +28,7 @@ function App() {
         <div className="title">Daily Dose of Advice</div>
         <div className="advice-and-button">
           <div className="advice">{advice}</div>
-          <button className="button" onClick={newAdvice}>Give me advice!</button>
+          <button className="button" onClick={() => {newAdvice()}}>Give me advice!</button>
         </div>
       </div>
     </div>
