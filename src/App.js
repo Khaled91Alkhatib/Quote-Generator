@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import "./App.scss";
+
 function App() {
   const [advice, setAdvice] = useState("");
 
@@ -22,8 +24,16 @@ function App() {
 
   return (
     <div>
-      <div>Daily Dose of Advice</div>
-      <div>{advice}</div>
+      <video className="the-video" autoPlay loop muted>
+        <source src="Background.mp4" type="video/mp4" />
+      </video>
+      <div className="content">
+        <div className="title">Daily Dose of Advice</div>
+        <div className="advice-and-button">
+          <div className="advice">{advice}</div>
+          <button className="button" onClick={newAdvice}>Give me advice!</button>
+        </div>
+      </div>
     </div>
   );
 }
