@@ -33,11 +33,11 @@ function App() {
       <div className="content">
         <div className="title">Daily Dose of Advice</div>
         <div className="advice-and-button">
-          <div className="advice">{advice}</div>
+          <div id="toClip" className="advice">{advice}</div>
           <div className="icons-with-button">
           <i onClick={() => speechHandler(msg)} className="fa fa-microphone icons"></i>
           <button className="button" onClick={() => { newAdvice(); }}>Give me advice!</button>
-          <i className="fa fa-copy icons" />
+          <i onClick={() =>  navigator.clipboard.writeText(advice)} className="fa fa-copy icons" />
           </div>
         </div>
       </div>
